@@ -1,0 +1,4 @@
+include:
+  - project: '1000kit/infra/ci/docker'
+    ref: 'v1'
+    file: 'build.yml'
