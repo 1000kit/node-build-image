@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: node-build
+  description: Docker image used for CI pipeline jobs of Node/JS apps
+  annotations:
+    tkit.org/service-discovery: gitlab
+    gitlab.com/project-slug: 1000kit/infra/docker-images/node-build
+  tags:
+    - docker
+    - image
+    - node
+spec:
+  type: dockerimage
+  lifecycle: experimental
+  owner: sme
+  system: infra-tooling
