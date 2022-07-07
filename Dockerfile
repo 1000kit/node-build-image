@@ -11,6 +11,7 @@ RUN apt-get update \
     && apt-get install -y docker-ce
 
 COPY --from=samo /usr/bin/samo /usr/local/bin/samo
+COPY --from=samo /usr/bin/helm /usr/bin/helm
 
 ENV CHROMIUM_FLAGS="--no-sandbox"
 ENV CHROME_BIN=/usr/bin/chromium
