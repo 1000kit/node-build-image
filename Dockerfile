@@ -6,7 +6,7 @@ ARG BINARY=yq_linux_amd64
 RUN apt-get update && apt-get install -y jq chromium 
 RUN apt-get update \
     && apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common curl ca-certificates lsb-release \
-    && apt-get libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
+    libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
     && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - \
     && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" \
     && apt-get update \
