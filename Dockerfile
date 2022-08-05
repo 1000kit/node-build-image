@@ -6,5 +6,7 @@ RUN apt-get update && apt-get install -y jq chromium
 
 COPY --from=samo /usr/bin/samo /usr/local/bin/samo
 
+LABEL org.opencontainers.image.source https://github.com/1000kit/node-build-image
+
 ENV CHROMIUM_FLAGS="--no-sandbox"
 ENV CHROME_BIN=/usr/bin/chromium
